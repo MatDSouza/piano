@@ -33,6 +33,11 @@ document.addEventListener("keydown", (e)=>{
 
 const handleVolume = (e)=>{
      audio.volume = e.target.value;
+    }
+
+const showHideKeys = ()=>{
+    pianoKeys.forEach(key => key.classList.toggle("hide"))
 }
 
-volumeSlider.addEventListener("input", handleVolume)
+volumeSlider.addEventListener("input", handleVolume);
+keysCheck.addEventListener("click", showHideKeys);
